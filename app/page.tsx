@@ -3,13 +3,14 @@ import Image from "next/image";
 import { HiArrowNarrowRight } from "react-icons/hi";
 
 import About from "@/components/sections/AboutUs";
+import Services from "@/components/sections/Services"
 
 
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col gap-5">
-        <header className="relative h-screen w-full px-5">
+      <div className="flex flex-col gap-5 ">
+        <header className="relative min-h-screen w-full px-5">
           <Image src="/Hero.webp" alt="Hero" fill className="absolute top-0 left-0 w-full h-full object-cover z-0" />
           <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-10"></div>
 
@@ -29,6 +30,8 @@ export default function Home() {
 
 
         <About/>
+        <Services/>
+
       </div>
 
     </>

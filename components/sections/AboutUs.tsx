@@ -1,13 +1,14 @@
-import { FaBus } from "react-icons/fa";
 import CardAbout from "../ui/CardAbout";
+
+
+import { HiHeart, HiTruck , HiUsers    } from "react-icons/hi";
 
 export default function About() {
     return (
-        <section className="flex flex-col items-center px-4 py-16 text-center">
+        <section className="flex flex-col items-center px-4 py-16 text-center min-h-screen">
 
-            {/* Título */}
-            <span className="text-sm text-yellowPrimary uppercase tracking-wide">
-                Quiénes Somos
+            <span className="text-sm text-yellowPrimary font-semibold">
+                QUÍENES SOMOS
             </span>
 
             <h3 className="text-2xl md:text-3xl font-semibold mt-2 mb-4">
@@ -24,19 +25,19 @@ export default function About() {
             {/* Cards */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full max-w-6xl">
                 <CardAbout
-                    icon={<FaBus />}
+                    icon={<HiUsers  />}
                     title="Personal Capacitado"
                     description="Conductores y acompañantes entrenados en primeros auxilios y manejo de situaciones especiales."
                 />
 
                 <CardAbout
-                    icon={<FaBus />}
+                    icon={<HiHeart />}
                     title="Trato Humano"
                     description="Entendemos que cada pasajero es único. La paciencia, el respeto y la empatía son nuestro motor."
                 />
 
                 <CardAbout
-                    icon={<FaBus />}
+                    icon={<HiTruck  />}
                     title="Vehículos Habilitados"
                     description="Toda nuestra flota cuenta con las habilitaciones vigentes y seguros requeridos para el transporte especial."
                 />
