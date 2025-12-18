@@ -25,11 +25,15 @@ export default function Home() {
               <HiOutlineShieldCheck size={18} />
               <h4 className="text-xs">Seguridad Certificada y Habilitada</h4>
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold max-w-3xl ">Transportes con
-              <span className="text-primary"> Amor</span> y Paciencia
+            <h1 className="text-3xl md:text-4xl font-bold max-w-3xl lg:text-start">
+              Transporte Seguro para Niños y Jóvenes con Discapacidad en Mendoza
+
             </h1>
-            <p className="max-w-2xl text-sm md:text-base text-light  lg:text-start">Especialistas en el traslado de niños y jóvenes con discapacidad. Llegamos a cualquier punto de Mendoza, conectando hogares con instituciones educativas y terapéuticas con máxima seguridad.</p>
-            <Link href="/vehiculos"  className="mt-4 bg-primary text-black font-semibold px-6 py-3 rounded-xl hover:bg-amber-400 transition-colors flex items-center gap-2">Conocer Nuestra Flota  <HiArrowNarrowRight /></Link>
+
+            <p className="max-w-2xl text-sm md:text-base text-light  lg:text-start">Más de 15 años brindando traslados responsables, humanos y adaptados,
+              priorizando la seguridad, el bienestar y la tranquilidad de cada familia.
+            </p>
+            <Link href="/vehiculos" className="mt-4 bg-primary text-black font-semibold px-6 py-3 rounded-xl hover:bg-amber-400 transition-colors flex items-center gap-2">Conocer Nuestra Flota  <HiArrowNarrowRight /></Link>
           </section>
         </header>
 
@@ -39,9 +43,9 @@ export default function Home() {
         <section className=" w-11/12 mx-auto my-6 px-4 py-5 rounded-xl bg-[#0c4a6e] -rotate-1 flex flex-col items-center gap-4 md:px-24 lg:px-32 lg:py-10 ">
           <HiOutlineTrophy className="text-yellowPrimary" size={32} />
 
-          <h4 className="text-light text-center font-medium leading-snug text-lg md:text-2xl lg:text-3xl max-w-full md:max-w-lg lg:max-w-xl ">
-            Desde 2.008 agregando un plus de excelencia al servicio de transporte.
-          </h4>
+          <h2 className="text-light text-center font-medium leading-snug text-lg md:text-2xl lg:text-3xl max-w-full md:max-w-lg lg:max-w-xl ">
+            Más de 15 años brindando transporte especial de excelencia
+          </h2>
 
           <div className="flex justify-center gap-2" >
             <div className="w-10 h-2 bg-yellowPrimary rounded-xl"></div>
@@ -50,19 +54,19 @@ export default function Home() {
           </div>
         </section>
 
-        <Collaborators/>
+        <Collaborators />
 
         <div id="Contact" className="flex flex-col gap-4 p-6 mt-8 py-20 bg-slate-100 md:flex-row lg:px-20">
-          <Contact/>
-          <Form/>
+          <Contact />
+          <Form />
         </div>
 
 
 
       </div>
 
-      <a href="https://wa.link/3d8upf" rel="noopener noreferrer"  target="_blank" className="fixed bottom-8 right-8 bg-[#25D366] p-2 rounded-full z-40 hover:cursor-pointer duration-150 hover:scale-110">
-        <FaWhatsapp size={30} color="white"/>
+      <a href="https://wa.link/3d8upf" rel="noopener noreferrer" target="_blank" className="fixed bottom-8 right-8 bg-[#25D366] p-2 rounded-full z-40 hover:cursor-pointer duration-150 hover:scale-110">
+        <FaWhatsapp size={30} color="white" />
       </a>
 
     </>

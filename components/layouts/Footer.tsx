@@ -1,54 +1,83 @@
-import Image from "next/image"
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
 
-    const enlaces = {
-        "Inicio": "#Header",
-        "Quienes Somos": "#About",
-        "Servicios": "#Service",
-        "Contacto": "#Contact",
-    }
+    const enlaces = [
+        { label: "Inicio", href: "/" },
+        { label: "Quiénes Somos", href: "/#About" },
+        { label: "Servicios", href: "/#Services" },
+        { label: "Vehículos", href: "/vehiculos" },
+        { label: "Contacto", href: "/#Contact" },
+    ];
 
-    const servicios = ["Transporte Escolar", "Translados Medicos", "Vehiculos Adaptados"]
-
+    const servicios = [
+        "Transporte Escolar Especial",
+        "Traslados Médicos Programados",
+        "Vehículos Adaptados",
+    ];
 
     return (
-        <>
-            <footer className="bg-black p-4 pt-10">
-                <div className="flex flex-col gap-5 md:flex-row md:justify-around md:items-start mb-10">
-                    <div className="flex flex-col gap-2 md:w-80 md:-mt-5">
-                        <Image alt="Logo RJC Transportes" width={70} height={70} src="/Logo.png" />
-                        <p className="text-xs text-slate-300">Brindando transporte especializado, seguro y confiable. Comprometidos con la inclusión y el bienestar de nuestros pasajeros.</p>
-                    </div>
+        <footer className="bg-black text-slate-300 px-6 py-10">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
 
-                    <div className="flex flex-col gap-2">
-                        <h3 className="text-white text-sm font-medium">Enlaces</h3>
+                {/* Marca + SEO */}
+                <div className="flex flex-col gap-3">
+                    <Image
+                        src="/Logo.png"
+                        alt="RJC Transportes - Transporte especial para niños con discapacidad"
+                        width={80}
+                        height={80}
+                    />
 
-                        {Object.entries(enlaces).map(([texto, href]) => (
-                            <a key={texto} href={href} className="text-xs text-slate-300 hover:text-white transition-colors" >
-                                {texto}
-                            </a>
-                        ))}
-                    </div>
-
-                    <div className="flex flex-col gap-2">
-                        <h3 className="text-white text-sm font-medium">Servicios</h3>
-
-                        {servicios.map((servicio) => (
-                            <p key={servicio} className="text-xs text-slate-300" >
-                                {servicio}
-                            </p>
-                        ))}
-                    </div>
+                    <p className="text-xs leading-relaxed">
+                        <strong>RJC Transportes</strong> brinda servicios de transporte seguro y adaptado
+                        para niños y jóvenes con discapacidad en Mendoza. Más de 15 años de experiencia,
+                        compromiso humano y vehículos habilitados.
+                    </p>
                 </div>
 
-                <hr className="m-auto w-5/6 border-slate-700 mb-10"/>
-                <p className="text-center text-slate-600 text-xs">© 2025 RJC - Transportes. Todos los derechos reservados.</p>
-                <p className="text-end mt-5 -mb-2 text-slate-700 text-xs">Developed by Diego Canales</p>
+                {/* Enlaces internos */}
+                <nav className="flex flex-col gap-2">
+                    <h3 className="text-white text-sm font-semibold">
+                        Enlaces
+                    </h3>
 
+                    {enlaces.map((e) => (
+                        <Link
+                            key={e.href}
+                            href={e.href}
+                            className="text-xs hover:text-white transition-colors"
+                        >
+                            {e.label}
+                        </Link>
+                    ))}
+                </nav>
 
+                {/* Servicios + SEO */}
+                <div className="flex flex-col gap-2">
+                    <h3 className="text-white text-sm font-semibold">
+                        Servicios
+                    </h3>
 
-            </footer>
-        </>
-    )
+                    {servicios.map((servicio) => (
+                        <p key={servicio} className="text-xs">
+                            {servicio}
+                        </p>
+                    ))}
+
+                    {/* SEO local explícito */}
+                    <p className="text-xs mt-3 text-slate-400">
+                        Servicio de transporte especial en Mendoza y alrededores.
+                    </p>
+                </div>
+
+            </div>
+
+            {/* Copyright */}
+            <div className="mt-10 border-t border-slate-800 pt-4 text-center text-xs text-slate-500">
+                © {new Date().getFullYear()} RJC Transportes · Transporte Especial en Mendoza
+            </div>
+        </footer>
+    );
 }

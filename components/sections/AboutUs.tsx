@@ -1,7 +1,7 @@
 import CardAbout from "../ui/CardAbout";
 
 
-import { HiHeart, HiTruck , HiUsers    } from "react-icons/hi";
+import { HiHeart, HiTruck, HiUsers } from "react-icons/hi";
 
 export default function About() {
     return (
@@ -11,21 +11,22 @@ export default function About() {
                 QUÍENES SOMOS
             </span>
 
-            <h3 className="text-2xl md:text-3xl font-semibold mt-2 mb-4">
-                Comprometidos con la Movilidad Inclusiva
-            </h3>
+            <h2 className="text-2xl md:text-3xl font-semibold mt-2 mb-4">
+                Comprometidos con el Transporte Inclusivo
+            </h2>
 
             <p className="text-md text-slate-700 max-w-3xl mb-12">
-                En RJC, trabajamos para eliminar las barreras de movilidad. Nuestra misión
-                es garantizar que el transporte no sea un impedimento para acceder a la
-                educación o la salud. Brindamos un servicio profesional donde la seguridad
-                y el confort son lo más importante.
+                En RJC Transportes trabajamos desde hace más de 15 años ofreciendo
+                servicios de transporte especializado para niños y jóvenes con discapacidad.
+                Nuestro objetivo es garantizar traslados seguros, puntuales y adaptados,
+                acompañando a cada familia con responsabilidad y compromiso humano.
+
             </p>
 
             {/* Cards */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full max-w-6xl">
                 <CardAbout
-                    icon={<HiUsers  />}
+                    icon={<HiUsers />}
                     title="Personal Capacitado"
                     description="Conductores y acompañantes entrenados en primeros auxilios y manejo de situaciones especiales."
                 />
@@ -37,7 +38,7 @@ export default function About() {
                 />
 
                 <CardAbout
-                    icon={<HiTruck  />}
+                    icon={<HiTruck />}
                     title="Vehículos Habilitados"
                     description="Toda nuestra flota cuenta con las habilitaciones vigentes y seguros requeridos para el transporte especial."
                 />

@@ -6,6 +6,8 @@ interface CardVehicleProps {
     image: string;
 }
 
+
+
 export default function CardVehicle({
     name,
     year,
@@ -16,7 +18,7 @@ export default function CardVehicle({
             <div className="relative w-full h-48">
                 <Image
                     src={image}
-                    alt={name}
+                    alt={`Vehículo adaptado ${name} para transporte de niños con discapacidad`}
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -24,9 +26,9 @@ export default function CardVehicle({
             </div>
 
             <div className="p-3 text-left">
-                <p className="text-sm font-semibold text-slate-800">
+                <h3 className="text-sm font-semibold text-slate-800">
                     {name}
-                </p>
+                </h3>
                 <p className="text-xs text-slate-500">
                     Año {year}
                 </p>
