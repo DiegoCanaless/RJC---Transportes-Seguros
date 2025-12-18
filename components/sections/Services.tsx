@@ -6,7 +6,7 @@ import CardService from "../ui/CardService"
 export default function Service() {
     return (
         <>
-            <section className="flex flex-col items-center px-4 py-16 text-center min-h-screen bg-slate-100">
+            <section id="Services" className="flex flex-col items-center px-4 py-16 text-center min-h-screen bg-slate-100">
 
                 <span className="text-sm text-yellowPrimary font-semibold"> NUESTROS SERVICIOS </span>
 

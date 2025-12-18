@@ -1,19 +1,21 @@
 import Image from "next/image";
 import { HiArrowNarrowRight, HiOutlineShieldCheck } from "react-icons/hi";
 import { HiOutlineTrophy } from "react-icons/hi2";
+import { FaWhatsapp } from "react-icons/fa";
 
 import About from "@/components/sections/AboutUs";
 import Services from "@/components/sections/Services"
 import Collaborators from "@/components/sections/Collaborators";
 import Contact from "@/components/sections/Contact";
 import Form from "@/components/sections/Form";
+import Link from "next/link";
 
 
 export default function Home() {
   return (
     <>
       <div className="flex flex-col gap-5 ">
-        <header className="relative min-h-screen w-full px-5">
+        <header className="relative min-h-screen w-full px-5" id="Home">
           <Image src="/Hero.webp" alt="Hero" fill className="absolute top-0 left-0 w-full h-full object-cover z-0" />
           <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-10"></div>
 
@@ -27,7 +29,7 @@ export default function Home() {
               <span className="text-primary"> Amor</span> y Paciencia
             </h1>
             <p className="max-w-2xl text-sm md:text-base text-light  lg:text-start">Especialistas en el traslado de niños y jóvenes con discapacidad. Llegamos a cualquier punto de Mendoza, conectando hogares con instituciones educativas y terapéuticas con máxima seguridad.</p>
-            <button className="mt-4 bg-primary text-black font-semibold px-6 py-3 rounded-xl hover:bg-amber-400 transition-colors flex items-center gap-2">Conocer Nuestra Flota  <HiArrowNarrowRight /></button>
+            <Link href="/vehiculos"  className="mt-4 bg-primary text-black font-semibold px-6 py-3 rounded-xl hover:bg-amber-400 transition-colors flex items-center gap-2">Conocer Nuestra Flota  <HiArrowNarrowRight /></Link>
           </section>
         </header>
 
@@ -50,7 +52,7 @@ export default function Home() {
 
         <Collaborators/>
 
-        <div className="flex flex-col gap-4 p-6 mt-8 bg-slate-100 md:flex-row lg:px-20 lg:py-10">
+        <div id="Contact" className="flex flex-col gap-4 p-6 mt-8 py-20 bg-slate-100 md:flex-row lg:px-20">
           <Contact/>
           <Form/>
         </div>
@@ -58,6 +60,10 @@ export default function Home() {
 
 
       </div>
+
+      <a href="https://wa.link/3d8upf" rel="noopener noreferrer"  target="_blank" className="fixed bottom-8 right-8 bg-[#25D366] p-2 rounded-full z-40 hover:cursor-pointer duration-150 hover:scale-110">
+        <FaWhatsapp size={30} color="white"/>
+      </a>
 
     </>
 

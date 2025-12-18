@@ -5,7 +5,7 @@ import { HiHeart, HiTruck , HiUsers    } from "react-icons/hi";
 
 export default function About() {
     return (
-        <section className="flex flex-col items-center px-4 py-16 text-center min-h-screen">
+        <section id="About" className="flex flex-col items-center px-4 py-16 text-center min-h-screen">
 
             <span className="text-sm text-yellowPrimary font-semibold">
                 QUÍENES SOMOS
