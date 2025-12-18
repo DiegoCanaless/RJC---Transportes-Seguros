@@ -27,8 +27,8 @@ export default function RootLayout({
               "name": "RJC Transportes",
               "description":
                 "Empresa de transporte especial para niños y jóvenes con discapacidad. Traslados escolares y médicos en Mendoza con vehículos adaptados y personal capacitado.",
-              "url": "https://www.rjctransportes.com",
-              "logo": "https://www.rjctransportes.com/Logo.png",
+              "url": "https://rjc-transportes-seguros.vercel.app/",
+              "logo": "https://rjc-transportes-seguros.vercel.app/Logo.png",
               "areaServed": {
                 "@type": "AdministrativeArea",
                 "name": "Mendoza, Argentina"
