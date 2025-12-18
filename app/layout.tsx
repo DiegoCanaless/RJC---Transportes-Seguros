@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import Navbar from "../components/layouts/Navbar";
 import Footer from "../components/layouts/Footer";
@@ -17,28 +18,39 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        {/* Schema.org - Local Business */}
-        <script
+        {/* SCHEMA.ORG */}
+        <Script
+          id="schema-rjc"
           type="application/ld+json"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "TransportationService",
               "name": "RJC Transportes",
               "description":
-                "Empresa de transporte especial para niños y jóvenes con discapacidad. Traslados escolares y médicos en Mendoza con vehículos adaptados y personal capacitado.",
-              "url": "https://rjc-transportes-seguros.vercel.app/",
-              "logo": "https://rjc-transportes-seguros.vercel.app/Logo.png",
+                "Servicio de transporte especializado para niños y jóvenes con discapacidad en Mendoza. Traslados escolares y médicos con vehículos adaptados.",
               "areaServed": {
                 "@type": "AdministrativeArea",
-                "name": "Mendoza, Argentina"
+                "name": "Mendoza, Argentina",
               },
-              "serviceType": [
-                "Transporte Escolar Especial",
-                "Traslados Médicos",
-                "Transporte para Personas con Discapacidad"
-              ],
-              "foundingDate": "2008"
+              "serviceType": "Transporte Especial para Personas con Discapacidad",
+              "provider": {
+                "@type": "Organization",
+                "name": "RJC Transportes",
+                "url": "https://rjc-transportes-seguros.vercel.app",
+              },
+              "availableChannel": {
+                "@type": "ServiceChannel",
+                "serviceLocation": {
+                  "@type": "Place",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Mendoza",
+                    "addressCountry": "AR",
+                  },
+                },
+              },
             }),
           }}
         />
