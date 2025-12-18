@@ -24,23 +24,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "TransportationService",
-              name: "RJC Transportes",
-              url: "https://rjc-transportes-seguros.vercel.app/",
-              description:
+              "@type": "LocalBusiness",
+              "name": "RJC Transportes",
+              "url": "https://rjc-transportes-seguros.vercel.app/",
+              "description":
                 "Servicio de transporte especializado para niños y jóvenes con discapacidad en Mendoza. Traslados escolares y médicos con vehículos adaptados.",
-              areaServed: {
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Mendoza",
+                "addressCountry": "Argentina"
+              },
+              "areaServed": {
                 "@type": "AdministrativeArea",
-                name: "Mendoza, Argentina",
+                "name": "Mendoza, Argentina"
               },
-              serviceType: "Transporte especial para personas con discapacidad",
-              provider: {
+              "serviceType": "Transporte especial para personas con discapacidad",
+              "provider": {
                 "@type": "Organization",
-                name: "RJC Transportes",
-              },
+                "name": "RJC Transportes"
+              }
             }),
           }}
         />
+
       </head>
       <body className="antialiased">
         <Navbar />
