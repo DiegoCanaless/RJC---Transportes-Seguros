@@ -8,8 +8,8 @@ export default function Contact() {
         <>
             <section className="flex flex-col lg:mr-20">
                 <h5 className="text-xs text-yellowPrimary font-semibold mb-2">CONTÁCTANOS</h5>
-                <p className="text-xl font-medium mb-5">¿Listo para coordinar el transporte?</p>
-                <p className="text-smd font-light">RJC Transportes ofrece servicios de transporte especial para niños con
+                <p className="text-2xl font-medium mb-5">¿Listo para coordinar el transporte?</p>
+                <p className="text-lg font-light">RJC Transportes ofrece servicios de transporte especial para niños con
                     discapacidad en Mendoza y zonas cercanas. Contactanos para recibir
                     asesoramiento personalizado y coordinar traslados seguros y confiables.
                 </p>

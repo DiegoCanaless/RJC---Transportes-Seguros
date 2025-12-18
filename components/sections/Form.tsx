@@ -30,7 +30,7 @@ export default function Form() {
 
                         {/* NOMBRE COMPLETO */}
                         <div className="flex flex-col gap-1">
-                            <label htmlFor="fullName" className="text-[10px] font-normal">Nombre y Apellido</label>
+                            <label htmlFor="fullName" className="text-[14px] font-normal">Nombre y Apellido</label>
 
                             <Field
                                 id="fullName"
@@ -49,7 +49,7 @@ export default function Form() {
 
                         {/* TELEFONO */}
                         <div className="flex flex-col gap-1">
-                            <label htmlFor="phoneNumber" className="text-[10px] font-normal">Teléfono</label>
+                            <label htmlFor="phoneNumber" className="text-[14px] font-normal">Teléfono</label>
 
                             <Field
                                 id="phoneNumber"
@@ -68,7 +68,7 @@ export default function Form() {
 
                         {/* CORREO ELECTRONICO */}
                         <div className="flex flex-col gap-1">
-                            <label htmlFor="email" className="text-[10px] font-normal">Email</label>
+                            <label htmlFor="email" className="text-[14px] font-normal">Email</label>
 
                             <Field
                                 id="email"
@@ -87,7 +87,7 @@ export default function Form() {
 
                         {/* OBRA SOCIAL */}
                         <div className="flex flex-col gap-1">
-                            <label htmlFor="socialWork" className="text-[10px] font-normal">Obra Social</label>
+                            <label htmlFor="socialWork" className="text-[14px] font-normal">Obra Social</label>
 
                             <Field
                                 as="select"
@@ -113,7 +113,7 @@ export default function Form() {
 
                          {/* Message */}
                         <div className="flex flex-col gap-1">
-                            <label htmlFor="message" className="text-[10px] font-normal">Mensaje</label>
+                            <label htmlFor="message" className="text-[14px] font-normal">Mensaje</label>
 
                             <Field
                                 as="textarea"
