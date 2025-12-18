@@ -30,7 +30,7 @@ export default function Home() {
 
             </h1>
 
-            <p className="max-w-2xl text-sm md:text-base text-light  lg:text-start">Más de 15 años brindando traslados responsables, humanos y adaptados,
+            <p className="max-w-2xl text-md md:text-base text-light  lg:text-start">Más de 15 años brindando traslados responsables, humanos y adaptados,
               priorizando la seguridad, el bienestar y la tranquilidad de cada familia.
             </p>
             <Link href="/vehiculos" className="mt-4 bg-primary text-black font-semibold px-6 py-3 rounded-xl hover:bg-amber-400 transition-colors flex items-center gap-2">Conocer Nuestra Flota  <HiArrowNarrowRight /></Link>
@@ -66,7 +66,7 @@ export default function Home() {
       </div>
 
       <a href="https://wa.link/3d8upf" aria-label="Ir al whattsapp de RJC para consultas" rel="noopener noreferrer" target="_blank" className="fixed bottom-8 right-8 bg-[#25D366] p-2 rounded-full z-40 hover:cursor-pointer duration-150 hover:scale-110">
-        <FaWhatsapp aria-hidden="true" size={30} color="white" />
+        <FaWhatsapp size={30} aria-hidden="true" color="white" />
       </a>
 
     </>

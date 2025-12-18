@@ -27,7 +27,7 @@ export default function CardCompanie({
 
                 <ul className="flex flex-wrap w-full h-auto gap-2 p-2">
                     {companies.map((company) => (
-                        <div key={company}className="text-xs text-slate-700 px-2 py-1 bg-light rounded-xl border">
+                        <div key={company}className="text-[13px] text-slate-700 px-2 py-1 bg-light rounded-xl border">
                             {company}
                         </div>
                     ))}

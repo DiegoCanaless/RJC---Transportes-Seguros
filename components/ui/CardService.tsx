@@ -19,11 +19,11 @@ export default function CardService({
                 {icon}
             </div>
 
-            <h3 className="font-semibold text-lg mb-2">
+            <h3 className="font-semibold text-xl mb-2">
                 {title}
             </h3>
 
-            <p className="text-sm text-slate-700 text-start">
+            <p className="text-md text-slate-700 text-start">
                 {description}
             </p>
         </div>
