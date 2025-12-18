@@ -1,0 +1,20 @@
+
+export const schools = [
+    "Semorille",
+    "EINNO",
+    "Esperanza",
+    "Villalobos",
+    "Pompilio Shilardi",
+    "Kalen Hue",
+    "Ricardo Rojas",
+    "U.N.C.",
+    "Juan E. Serú",
+    "Universidad de Mendoza",
+    "Aguirre",
+    "Prof. Reta",
+    "Bohorquez",
+    "Tiburcio Benegas",
+    "Agustín Álvarez",
+    "Arístides Villanueva",
+    "Frédéric Chopin",
+] as const;

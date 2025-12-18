@@ -1,0 +1,36 @@
+import ContactForms from "../ui/ContactForms";
+
+import { HiOutlineLocationMarker, HiOutlineMail, HiOutlinePhone } from "react-icons/hi";
+
+export default function Contact() {
+
+    return (
+        <>
+        <section className="flex flex-col lg:mr-20">
+            <h5 className="text-xs text-yellowPrimary font-semibold mb-2">CONTÁCTANOS</h5>
+            <p className="text-xl font-medium mb-5">¿Listo para coordinar el transporte?</p>
+            <p className="text-sm font-light">Estamos aquí para resolver todas tus dudas. Escríbenos y te responderemos a la brevedad para coordinar las necesidades de traslado.</p>
+            <div className="flex flex-col w-full  py-2 mt-5 gap-4">
+                <ContactForms
+                    icon= {<HiOutlinePhone size={22}/>}
+                    title="Llámanos"
+                    value="+54 9 11 1234-5678"
+                />
+
+                <ContactForms
+                    icon= {<HiOutlineMail  size={22}/>}
+                    title="Escríbenos"
+                    value="info@rjc-transportes.com"
+                />
+
+                <ContactForms
+                    icon= {<HiOutlineLocationMarker   size={22}/>}
+                    title="Ubicación"
+                    value="Mendoza, Argentina"
+                />
+            </div>
+        </section>
+            
+        </>
+    )
+}
