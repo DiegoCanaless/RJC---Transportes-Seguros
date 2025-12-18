@@ -22,7 +22,7 @@ export default function Home() {
 
           <section className="absolute top-0 left-0 w-full h-full z-30 flex flex-col gap-6 justify-center items-center text-white text-center px-5  lg:items-start lg:pl-20">
             <div className="border border-white/80 py-2 px-4 rounded-2xl flex items-center gap-2 bg-white/5 backdrop-blur-sm">
-              <HiOutlineShieldCheck size={18} />
+              <HiOutlineShieldCheck aria-hidden="true" size={18} />
               <h4 className="text-xs">Seguridad Certificada y Habilitada</h4>
             </div>
             <h1 className="text-3xl md:text-4xl font-bold max-w-3xl lg:text-start">
@@ -41,7 +41,7 @@ export default function Home() {
         <Services />
 
         <section className=" w-11/12 mx-auto my-6 px-4 py-5 rounded-xl bg-[#0c4a6e] -rotate-1 flex flex-col items-center gap-4 md:px-24 lg:px-32 lg:py-10 ">
-          <HiOutlineTrophy className="text-yellowPrimary" size={32} />
+          <HiOutlineTrophy aria-hidden="true" className="text-yellowPrimary" size={32} />
 
           <h2 className="text-light text-center font-medium leading-snug text-lg md:text-2xl lg:text-3xl max-w-full md:max-w-lg lg:max-w-xl ">
             Más de 15 años brindando transporte especial de excelencia
@@ -65,8 +65,8 @@ export default function Home() {
 
       </div>
 
-      <a href="https://wa.link/3d8upf" rel="noopener noreferrer" target="_blank" className="fixed bottom-8 right-8 bg-[#25D366] p-2 rounded-full z-40 hover:cursor-pointer duration-150 hover:scale-110">
-        <FaWhatsapp size={30} color="white" />
+      <a href="https://wa.link/3d8upf" aria-label="Ir al whattsapp de RJC para consultas" rel="noopener noreferrer" target="_blank" className="fixed bottom-8 right-8 bg-[#25D366] p-2 rounded-full z-40 hover:cursor-pointer duration-150 hover:scale-110">
+        <FaWhatsapp aria-hidden="true" size={30} color="white" />
       </a>
 
     </>

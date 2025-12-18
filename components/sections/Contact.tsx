@@ -15,19 +15,19 @@ export default function Contact() {
                 </p>
                 <div className="flex flex-col w-full  py-2 mt-5 gap-4">
                     <ContactForms
-                        icon={<HiOutlinePhone size={22} />}
+                        icon={<HiOutlinePhone aria-hidden="true" size={22} />}
                         title="Llámanos"
                         value="+54 9 11 1234-5678"
                     />
 
                     <ContactForms
-                        icon={<HiOutlineMail size={22} />}
+                        icon={<HiOutlineMail aria-hidden="true" size={22} />}
                         title="Escríbenos"
                         value="info@rjc-transportes.com"
                     />
 
                     <ContactForms
-                        icon={<HiOutlineLocationMarker size={22} />}
+                        icon={<HiOutlineLocationMarker aria-hidden="true" size={22} />}
                         title="Ubicación"
                         value="Mendoza, Argentina"
                     />

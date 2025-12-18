@@ -26,19 +26,19 @@ export default function About() {
             {/* Cards */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full max-w-6xl">
                 <CardAbout
-                    icon={<HiUsers />}
+                    icon={<HiUsers aria-hidden="true" />}
                     title="Personal Capacitado"
                     description="Conductores y acompañantes entrenados en primeros auxilios y manejo de situaciones especiales."
                 />
 
                 <CardAbout
-                    icon={<HiHeart />}
+                    icon={<HiHeart aria-hidden="true" />}
                     title="Trato Humano"
                     description="Entendemos que cada pasajero es único. La paciencia, el respeto y la empatía son nuestro motor."
                 />
 
                 <CardAbout
-                    icon={<HiTruck />}
+                    icon={<HiTruck aria-hidden="true" />}
                     title="Vehículos Habilitados"
                     description="Toda nuestra flota cuenta con las habilitaciones vigentes y seguros requeridos para el transporte especial."
                 />

@@ -132,7 +132,7 @@ export default function Form() {
                         </div>
 
                         <button type="submit" className="flex items-center justify-center gap-2 w-full bg-white h-10 rounded-lg transition-colors border-2 border-gray-600  text-gray-600 hover:bg-yellowPrimary  hover:border-none hover:text-white">
-                            Enviar Consulta <FaPaperPlane/>
+                            Enviar Consulta <FaPaperPlane aria-hidden="true"/>
                         </button>
 
 

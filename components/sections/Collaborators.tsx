@@ -15,19 +15,19 @@ export default function Collaborators() {
         <>
             <section className="flex flex-col gap-6 w-full  px-4 lg:flex-row lg:px-16 ">
                 <CardCompanie 
-                    icon= {<FaHeartbeat/>}
+                    icon= {<FaHeartbeat aria-hidden="true"/>}
                     title= "Obras Sociales"
                     companies={socialWorks}
                 />
                 
                 <CardCompanie 
-                    icon= {<HiOfficeBuilding/>}
+                    icon= {<HiOfficeBuilding aria-hidden="true"/>}
                     title= "Instituciones"
                     companies={institutions}
                 />
 
                 <CardCompanie 
-                    icon= {<IoSchoolSharp/>}
+                    icon= {<IoSchoolSharp aria-hidden="true"/>}
                     title= "Colegios"
                     companies={schools}
                 />
