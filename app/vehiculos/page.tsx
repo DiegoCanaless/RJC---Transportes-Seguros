@@ -30,62 +30,62 @@ export default function Vehiculos() {
             {/* GRID RESPONSIVE */}
             <div className=" grid grid-cols-1 gap-6 w-full max-w-6xl md:grid-cols-2 lg:grid-cols-3">
                 <CardVehicle
-                    name="Mercedes Sprinter"
-                    year="2003"
+                    name="Nombre"
+                    year="1481"
                     image="/Vehicles/vehicle1.webp"
                 />
 
                 <CardVehicle
-                    name="Mercedes Sprinter"
-                    year="2003"
+                    name="Nombre"
+                    year="1481"
                     image="/Vehicles/vehicle2.webp"
                 />
 
                 <CardVehicle
-                    name="Mercedes Sprinter"
-                    year="2003"
+                    name="Nombre"
+                    year="1481"
                     image="/Vehicles/vehicle3.webp"
                 />
 
                 <CardVehicle
-                    name="Mercedes Sprinter"
-                    year="2003"
+                    name="Nombre"
+                    year="1481"
                     image="/Vehicles/vehicle4.webp"
                 />
 
                 <CardVehicle
-                    name="Mercedes Sprinter"
-                    year="2003"
+                    name="Nombre"
+                    year="1481"
                     image="/Vehicles/vehicle5.webp"
                 />
 
                 <CardVehicle
-                    name="Mercedes Sprinter"
-                    year="2003"
+                    name="Nombre"
+                    year="1481"
                     image="/Vehicles/vehicle6.webp"
                 />
 
                 <CardVehicle
-                    name="Mercedes Sprinter"
-                    year="2003"
+                    name="Nombre"
+                    year="1481"
                     image="/Vehicles/vehicle7.webp"
                 />
 
                 <CardVehicle
-                    name="Mercedes Sprinter"
-                    year="2003"
+                    name="Nombre"
+                    year="1481"
                     image="/Vehicles/vehicle8.webp"
                 />
 
                 <CardVehicle
-                    name="Mercedes Sprinter"
-                    year="2003"
+                    name="Nombre"
+                    year="1481"
                     image="/Vehicles/vehicle9.webp"
                 />
 
                 <CardVehicle
-                    name="Mercedes Sprinter"
-                    year="2003"
+                    name="Nombre"
+                    year="1481"
                     image="/Vehicles/vehicle10.webp"
                 />
 
