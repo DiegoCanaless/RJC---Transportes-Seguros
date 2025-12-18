@@ -17,44 +17,31 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <head>
-        {/* SCHEMA.ORG */}
-        <Script
-          id="schema-rjc"
-          type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "TransportationService",
+      {/* ✅ SCHEMA.ORG – FUERA DEL <head> */}
+      <Script
+        id="schema-rjc"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "TransportationService",
+            "name": "RJC Transportes",
+            "url": "https://rjc-transportes-seguros.vercel.app/",
+            "description":
+              "Servicio de transporte especializado para niños y jóvenes con discapacidad en Mendoza. Traslados escolares y médicos con vehículos adaptados.",
+            "areaServed": {
+              "@type": "AdministrativeArea",
+              "name": "Mendoza, Argentina",
+            },
+            "serviceType": "Transporte especial para personas con discapacidad",
+            "provider": {
+              "@type": "Organization",
               "name": "RJC Transportes",
-              "description":
-                "Servicio de transporte especializado para niños y jóvenes con discapacidad en Mendoza. Traslados escolares y médicos con vehículos adaptados.",
-              "areaServed": {
-                "@type": "AdministrativeArea",
-                "name": "Mendoza, Argentina",
-              },
-              "serviceType": "Transporte Especial para Personas con Discapacidad",
-              "provider": {
-                "@type": "Organization",
-                "name": "RJC Transportes",
-                "url": "https://rjc-transportes-seguros.vercel.app",
-              },
-              "availableChannel": {
-                "@type": "ServiceChannel",
-                "serviceLocation": {
-                  "@type": "Place",
-                  "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Mendoza",
-                    "addressCountry": "AR",
-                  },
-                },
-              },
-            }),
-          }}
-        />
-      </head>
+            },
+          }),
+        }}
+      />
 
       <body className="antialiased">
         <Navbar />
