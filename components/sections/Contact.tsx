@@ -23,7 +23,7 @@ export default function Contact() {
                     <ContactForms
                         icon={<HiOutlineMail aria-hidden="true" size={22} />}
                         title="Escríbenos"
-                        value="info@rjc-transportes.com"
+                        value="carletti.transporte@gmail.com"
                     />
 
                     <ContactForms

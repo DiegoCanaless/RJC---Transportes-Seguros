@@ -1,5 +1,6 @@
 import CardVehicle from "@/components/ui/CardVehicle";
 import { Metadata } from "next";
+import { FaWhatsapp } from "react-icons/fa";
 
 export const metadata: Metadata = {
     title: "Flota de Vehículos Adaptados | RJC Transportes Mendoza",
@@ -11,6 +12,8 @@ export const metadata: Metadata = {
 export default function Vehiculos() {
     return (
         <section className="min-h-screen pt-20 flex flex-col items-center px-4 text-center pb-10">
+
+
 
             <h2 className="text-sm text-yellowPrimary font-semibold">
                 Nuestra Flota

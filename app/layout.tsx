@@ -3,6 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 import Navbar from "../components/layouts/Navbar";
 import Footer from "../components/layouts/Footer";
+import { FaWhatsapp } from "react-icons/fa";
 
 export const metadata: Metadata = {
   title: "RJC Transportes | Rodolfo J. Carletti – Transporte para Niños con Discapacidad en Mendoza",
@@ -55,6 +56,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
       </head>
       <body className="antialiased">
+        <a href="https://wa.link/3d8upf" aria-label="Ir al whattsapp de RJC para consultas" rel="noopener noreferrer" target="_blank" className="fixed bottom-8 right-8 bg-[#25D366] p-2 rounded-full z-40 hover:cursor-pointer duration-150 hover:scale-110">
+          <FaWhatsapp size={30} aria-hidden="true" color="white" />
+        </a>
         <Navbar />
         <main id="main-content">
           {children}

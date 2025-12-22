@@ -1,83 +1,127 @@
-"use client"
-import { ContactSchema } from "@/validations/contactSchema";
-import { ErrorMessage, Field, Formik } from "formik";
-import { socialWorks } from "@/data/socialworks";
+"use client";
+
+import { useState } from "react";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import { FaPaperPlane } from "react-icons/fa6";
+import emailjs from "@emailjs/browser";
 
+import { ContactSchema } from "@/validations/contactSchema";
+import { socialWorkOptions } from "@/data/socialWorksOptions";
+import Toast from "@/components/ui/Toast";
 
+export default function ContactForm() {
+    const [toast, setToast] = useState(null);
 
-
-export default function Form() {
     return (
         <>
+            {toast && (
+                <Toast
+                    type={toast.type}
+                    message={toast.message}
+                    onClose={() => setToast(null)}
+                />
+            )}
+
             <Formik
                 initialValues={{
                     name: "",
                     phone: "",
                     email: "",
                     socialWork: "",
-                    message: ""
+                    otherSocialWork: "",
+                    message: "",
                 }}
                 validationSchema={ContactSchema}
-                onSubmit={(values, { resetForm }) => {
-                    console.log("CORREO ENVIADO")
-                    resetForm()
+                onSubmit={async (values, { resetForm, setSubmitting }) => {
+                    const finalSocialWork =
+                        values.socialWork === "Otros"
+                            ? values.otherSocialWork
+                            : values.socialWork;
+
+                    const templateParams = {
+                        name: values.name,
+                        phone: values.phone,
+                        email: values.email,
+                        socialWork: finalSocialWork,
+                        message: values.message,
+                    };
+
+                    setToast({
+                        type: "loading",
+                        message: "Enviando consulta...",
+                    });
+
+                    try {
+                        await emailjs.send(
+                            process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+                            process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+                            templateParams,
+                            process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+                        );
+
+                        resetForm();
+                        setToast({
+                            type: "success",
+                            message: "Consulta enviada correctamente",
+                        });
+                    } catch (error) {
+                        console.error("EmailJS error:", error);
+                        setToast({
+                            type: "error",
+                            message: "Error al enviar la consulta. Intente nuevamente.",
+                        });
+                    } finally {
+                        setSubmitting(false);
+                    }
                 }}
             >
-                {({ isSubmitting }) => (
-                    <form className="flex flex-col gap-4 w-full max-w-md bg-light px-4 py-4 rounded-xl border shadow-md">
-                        <h5 className="text-md font-medium mb-4">Solicitar Información</h5>
+                {({ values, isSubmitting }) => (
+                    <Form className="flex flex-col gap-4 w-full max-w-md bg-light px-4 py-4 rounded-xl border shadow-md">
+                        <h5 className="text-md font-medium mb-4">
+                            Solicitar Información
+                        </h5>
 
-                        {/* NOMBRE COMPLETO */}
+                        {/* NOMBRE */}
                         <div className="flex flex-col gap-1">
-                            <label htmlFor="fullName" className="text-[14px] font-normal">Nombre y Apellido</label>
-
+                            <label className="text-[14px]">Nombre y Apellido</label>
                             <Field
-                                id="fullName"
-                                name="fullName"
+                                name="name"
                                 type="text"
                                 placeholder="Juan Pérez"
-                                className="bg-gray-700 px-4 text-xs py-2 rounded-md outline-amber-400 text-white"
+                                className="bg-gray-700 px-4 py-2 text-xs rounded-md text-white"
                             />
-
                             <ErrorMessage
-                                name="fullName"
+                                name="name"
                                 component="p"
                                 className="text-red-500 text-xs"
                             />
                         </div>
 
-                        {/* TELEFONO */}
+                        {/* TELÉFONO */}
                         <div className="flex flex-col gap-1">
-                            <label htmlFor="phoneNumber" className="text-[14px] font-normal">Teléfono</label>
-
+                            <label className="text-[14px]">Teléfono</label>
                             <Field
-                                id="phoneNumber"
-                                name="phoneNumber"
+                                name="phone"
                                 type="tel"
                                 placeholder="+54 9 261 443-4151"
-                                className="bg-gray-700 px-4 text-xs py-2 rounded-md outline-amber-400 text-white"
+                                className="bg-gray-700 px-4 py-2 text-xs rounded-md text-white"
                             />
-
                             <ErrorMessage
-                                name="phoneNumber"
+                                name="phone"
                                 component="p"
                                 className="text-red-500 text-xs"
                             />
                         </div>
 
-                        {/* CORREO ELECTRONICO */}
+                        {/* EMAIL */}
                         <div className="flex flex-col gap-1">
-                            <label htmlFor="email" className="text-[14px] font-normal">Email</label>
-
+                            <label className="text-[14px]">Email</label>
                             <Field
-                                id="email"
                                 name="email"
                                 type="email"
-                                placeholder="rjc@gmail.com"
-                                className="bg-gray-700 px-4 text-xs py-2 rounded-md outline-amber-400 text-white"
+                                placeholder="correo@gmail.com"
+                                className="bg-gray-700 px-4 py-2 text-xs rounded-md text-white"
                             />
-
                             <ErrorMessage
                                 name="email"
                                 component="p"
@@ -87,23 +131,19 @@ export default function Form() {
 
                         {/* OBRA SOCIAL */}
                         <div className="flex flex-col gap-1">
-                            <label htmlFor="socialWork" className="text-[14px] font-normal">Obra Social</label>
-
+                            <label className="text-[14px]">Obra Social</label>
                             <Field
                                 as="select"
-                                id="socialWork"
                                 name="socialWork"
-                                className="bg-gray-700 px-4 text-xs py-2 rounded-md outline-amber-400 text-white"
+                                className="bg-gray-700 px-4 py-2 text-xs rounded-md text-white"
                             >
-                                <option value="" className="text-slate-200">Seleccioná una obra social</option>
-
-                                {socialWorks.map((work) => (
-                                    <option key={work} value={work} className="text-white">
+                                <option value="">Seleccioná una obra social</option>
+                                {socialWorkOptions.map((work) => (
+                                    <option key={work} value={work}>
                                         {work}
                                     </option>
                                 ))}
                             </Field>
-
                             <ErrorMessage
                                 name="socialWork"
                                 component="p"
@@ -111,19 +151,35 @@ export default function Form() {
                             />
                         </div>
 
-                         {/* Message */}
-                        <div className="flex flex-col gap-1">
-                            <label htmlFor="message" className="text-[14px] font-normal">Mensaje</label>
+                        {/* OTROS */}
+                        {values.socialWork === "Otros" && (
+                            <div className="flex flex-col gap-1">
+                                <label className="text-[14px]">
+                                    ¿Cuál es su obra social?
+                                </label>
+                                <Field
+                                    name="otherSocialWork"
+                                    type="text"
+                                    placeholder="Ej: Swiss Medical"
+                                    className="bg-gray-700 px-4 py-2 text-xs rounded-md text-white"
+                                />
+                                <ErrorMessage
+                                    name="otherSocialWork"
+                                    component="p"
+                                    className="text-red-500 text-xs"
+                                />
+                            </div>
+                        )}
 
+                        {/* MENSAJE */}
+                        <div className="flex flex-col gap-1">
+                            <label className="text-[14px]">Mensaje</label>
                             <Field
                                 as="textarea"
-                                id="message"
                                 name="message"
-                                type="text"
-                                placeholder="Ingrese su consulta/mensaje"
-                                className="bg-gray-700 px-4 text-xs py-2 rounded-md outline-amber-400 text-white"
+                                placeholder="Ingrese su consulta"
+                                className="bg-gray-700 px-4 py-2 text-xs rounded-md text-white"
                             />
-
                             <ErrorMessage
                                 name="message"
                                 component="p"
@@ -131,18 +187,17 @@ export default function Form() {
                             />
                         </div>
 
-                        <button type="submit" className="flex items-center justify-center gap-2 w-full bg-white h-10 rounded-lg transition-colors border-2 border-gray-600  text-gray-600 hover:bg-yellowPrimary  hover:border-none hover:text-white">
-                            Enviar Consulta <FaPaperPlane aria-hidden="true"/>
+                        <button
+                            type="submit"
+                            disabled={isSubmitting}
+                            className="flex items-center justify-center gap-2 w-full bg-white h-10 rounded-lg border-2 border-gray-600 text-gray-600 hover:bg-yellowPrimary hover:text-white transition disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                            {isSubmitting ? "Enviando..." : "Enviar Consulta"}
+                            <FaPaperPlane />
                         </button>
-
-
-
-
-                    </form>
+                    </Form>
                 )}
-
-
             </Formik>
         </>
-    )
+    );
 }
