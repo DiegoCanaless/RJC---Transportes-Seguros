@@ -26,9 +26,21 @@ export default function Home() {
               <h4 className="text-xs">Seguridad Certificada y Habilitada</h4>
             </div>
             <h1 className="text-3xl md:text-4xl font-bold max-w-3xl lg:text-start">
-              Transporte Seguro para Niños y Jóvenes con Discapacidad en Mendoza
-
+              Servicio de transporte para personas con discapacidad
             </h1>
+
+            {/* 🔹 Marca visible (no título) */}
+            <p className="text-lg font-semibold text-yellowPrimary lg:text-start">
+              Rodolfo J. Carletti · RJC Transportes
+            </p>
+
+            {/* 🔹 Refuerzo SEO invisible */}
+            <p className="sr-only">
+              Rodolfo J. Carletti es responsable de RJC Transportes, empresa especializada en
+              transporte para personas con discapacidad en Mendoza.
+            </p>
+
+
 
             <p className="max-w-2xl text-md md:text-base text-light  lg:text-start">Más de 15 años brindando traslados responsables, humanos y adaptados,
               priorizando la seguridad, el bienestar y la tranquilidad de cada familia.

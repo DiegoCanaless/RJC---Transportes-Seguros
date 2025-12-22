@@ -35,7 +35,13 @@ export default function Footer() {
                         para niños y jóvenes con discapacidad en Mendoza. Más de 15 años de experiencia,
                         compromiso humano y vehículos habilitados.
                     </p>
+
+                    {/* 🔹 RESPONSABLE / AUTORIDAD */}
+                    <p className="text-xs text-slate-400">
+                        Responsable del servicio: <strong>Rodolfo J. Carletti</strong>
+                    </p>
                 </div>
+
 
                 {/* Enlaces internos */}
                 <nav className="flex flex-col gap-2">

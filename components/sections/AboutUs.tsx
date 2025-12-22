@@ -16,19 +16,18 @@ export default function About() {
             </h2>
 
             <p className="text-md text-slate-700 max-w-3xl mb-12">
-                En RJC Transportes trabajamos desde hace más de 15 años ofreciendo
-                servicios de transporte especializado para niños y jóvenes con discapacidad.
-                Nuestro objetivo es garantizar traslados seguros, puntuales y adaptados,
-                acompañando a cada familia con responsabilidad y compromiso humano.
-
+                RJC Transportes, liderado por <strong>Rodolfo J. Carletti</strong>, trabaja desde hace
+                más de 15 años ofreciendo servicios de transporte especializado para niños y jóvenes
+                con discapacidad.
             </p>
+
 
             {/* Cards */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full max-w-6xl">
                 <CardAbout
                     icon={<HiUsers aria-hidden="true" />}
                     title="Personal Capacitado"
-                    description="Conductores y acompañantes entrenados en primeros auxilios y manejo de situaciones especiales."
+                    description="Conductores entrenados en primeros auxilios y manejo de situaciones especiales."
                 />
 
                 <CardAbout

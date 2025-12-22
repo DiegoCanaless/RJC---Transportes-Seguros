@@ -68,7 +68,7 @@ export default function Vehiculos() {
                 <CardVehicle
                     name="Nombre"
                     year="1481"
-                    image="/Vehicles/vehicle7.webp"
+                    image="/Vehicles/vehicle7-v2.webp"
                 />
 
                 <CardVehicle

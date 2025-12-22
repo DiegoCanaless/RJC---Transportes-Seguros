@@ -19,7 +19,7 @@ export default function Service() {
                 </p>
 
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full max-w-6xl">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full max-w-6xl">
 
                     <CardService
                         icon={<FaBus aria-hidden="true" />}
@@ -32,14 +32,6 @@ export default function Service() {
                         title="Traslados Médicos"
                         description="Acompañamiento a terapias, kinesiología y consultas médicas. Un servicio pensado para la tranquilidad de la familia."
                     />
-
-                    <CardService
-                        icon={<FaAccessibleIcon aria-hidden="true" />}
-                        title="Vehículos Adaptados"
-                        description="Unidades equipadas con rampas y sistemas de anclaje homologados para el traslado seguro de pasajeros en silla de ruedas."
-                    />
-
-
 
                 </div>
             </section>

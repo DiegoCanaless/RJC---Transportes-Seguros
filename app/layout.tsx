@@ -5,10 +5,11 @@ import Navbar from "../components/layouts/Navbar";
 import Footer from "../components/layouts/Footer";
 
 export const metadata: Metadata = {
-  title: "RJC Transportes | Transporte para Niños con Discapacidad en Mendoza",
+  title: "RJC Transportes | Rodolfo J. Carletti – Transporte para Niños con Discapacidad en Mendoza",
   description:
-    "RJC Transportes brinda transporte seguro y adaptado para niños y jóvenes con discapacidad en Mendoza. Más de 15 años de experiencia, vehículos habilitados y personal capacitado.",
+    "RJC Transportes, dirigido por Rodolfo J. Carletti, brinda transporte seguro y adaptado para niños y jóvenes con discapacidad en Mendoza. Más de 15 años de experiencia, vehículos habilitados y personal capacitado.",
 };
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -29,6 +30,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "url": "https://rjc-transportes-seguros.vercel.app/",
               "description":
                 "Servicio de transporte especializado para niños y jóvenes con discapacidad en Mendoza. Traslados escolares y médicos con vehículos adaptados.",
+              "founder": {
+                "@type": "Person",
+                "name": "Rodolfo J. Carletti"
+              },
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Mendoza",
@@ -46,6 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             }),
           }}
         />
+
 
       </head>
       <body className="antialiased">
