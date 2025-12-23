@@ -33,62 +33,62 @@ export default function Vehiculos() {
             {/* GRID RESPONSIVE */}
             <div className=" grid grid-cols-1 gap-6 w-full max-w-6xl md:grid-cols-2 lg:grid-cols-3">
                 <CardVehicle
-                    name="Nombre"
-                    year="1481"
+                    name="Renault Logan"
+                    year="2023"
                     image="/Vehicles/vehicle1.webp"
                 />
 
                 <CardVehicle
-                    name="Nombre"
-                    year="1481"
+                    name="Gol"
+                    year="2018"
                     image="/Vehicles/vehicle2.webp"
                 />
 
                 <CardVehicle
-                    name="Nombre"
-                    year="1481"
+                    name="Volkswagen Suran"
+                    year="2015"
                     image="/Vehicles/vehicle3.webp"
                 />
 
                 <CardVehicle
-                    name="Nombre"
-                    year="1481"
+                    name="Fiat Cronos"
+                    year="2023"
                     image="/Vehicles/vehicle4.webp"
                 />
 
                 <CardVehicle
-                    name="Nombre"
-                    year="1481"
+                    name="Volkswagen Polo"
+                    year="2023"
                     image="/Vehicles/vehicle5.webp"
                 />
 
                 <CardVehicle
-                    name="Nombre"
-                    year="1481"
+                    name="Volkswagen Trend"
+                    year="2023"
                     image="/Vehicles/vehicle6.webp"
                 />
 
                 <CardVehicle
-                    name="Nombre"
-                    year="1481"
+                    name="Volkswagen Trend"
+                    year="2018"
                     image="/Vehicles/vehicle7-v2.webp"
                 />
 
                 <CardVehicle
-                    name="Nombre"
-                    year="1481"
+                    name="Chevrolet Cobalt"
+                    year="2012"
                     image="/Vehicles/vehicle8.webp"
                 />
 
                 <CardVehicle
-                    name="Nombre"
-                    year="1481"
+                    name="Chevrolet Cobalt"
+                    year="2012"
                     image="/Vehicles/vehicle9.webp"
                 />
 
                 <CardVehicle
-                    name="Nombre"
-                    year="1481"
+                    name="Renault Logan"
+                    year="2020"
                     image="/Vehicles/vehicle10.webp"
                 />
 
