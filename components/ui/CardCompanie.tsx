@@ -25,13 +25,14 @@ export default function CardCompanie({
                     <h5 className="text-md font-semibold">{title}</h5>
                 </div>
 
-                <ul className="flex flex-wrap w-full h-auto gap-2 p-2">
-                    {companies.map((company) => (
-                        <div key={company}className="text-[13px] text-slate-700 px-2 py-1 bg-light rounded-xl border">
-                            {company}
-                        </div>
+                <ul className="flex flex-wrap w-full gap-2 p-2">
+                    {companies.map((item) => (
+                        <li key={item} className="text-[13px] text-slate-700 px-2 py-1 bg-light rounded-xl border" >
+                            {item}
+                        </li>
                     ))}
                 </ul>
+
 
 
             </article>

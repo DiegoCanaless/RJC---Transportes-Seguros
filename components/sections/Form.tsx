@@ -106,8 +106,8 @@ export default function ContactForm() {
 
                         {/* OBRA SOCIAL */}
                         <div className="flex flex-col gap-1">
-                            <label className="text-[14px]">Obra Social</label>
-                            <Field as="select" name="socialWork" className="bg-gray-700 px-4 py-2 text-xs rounded-md text-white" >
+                            <label htmlFor="socialWork" className="text-[14px]">Obra Social</label>
+                            <Field as="select" name="socialWork"  id="socialWork" className="bg-gray-700 px-4 py-2 text-xs rounded-md text-white" >
                                 <option value="">Seleccioná una obra social</option>
                                 {socialWorkOptions.map((work) => (
                                     <option key={work} value={work}>
