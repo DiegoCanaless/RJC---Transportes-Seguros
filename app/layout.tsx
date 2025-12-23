@@ -17,6 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="es-AR">
       <head>
         <title>RJC Transportes | Transporte para Niños con Discapacidad en Mendoza</title>
+        <link rel="icon" href="../public/Logo.png" /> 
         <meta
           name="description"
           content="RJC Transportes brinda transporte seguro y adaptado para niños y jóvenes con discapacidad en Mendoza. Más de 15 años de experiencia, vehículos habilitados y personal capacitado."
