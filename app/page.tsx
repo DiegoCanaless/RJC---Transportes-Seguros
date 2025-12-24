@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -37,7 +36,7 @@ export default function Home() {
     <div className="flex flex-col gap-5">
       {/* ================= HERO ================= */}
       <header className="relative min-h-screen w-full px-5" id="Home">
-        <Image src="/Hero.webp" alt="Hero" fill priority className="absolute top-0 left-0 w-full h-full object-cover z-0" />
+        <img src="/Hero.webp" alt="Hero" className="absolute top-0 left-0 w-full h-full object-cover z-0" />
 
         <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-10" />
 

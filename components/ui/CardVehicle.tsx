@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 
 interface CardVehicleProps {
     name: string;
@@ -16,13 +16,12 @@ export default function CardVehicle({
     return (
         <article className="rounded-xl overflow-hidden bg-white shadow-md">
             <div className="relative w-full h-48">
-                <Image
+                <img
                     src={image}
                     alt={`Vehículo adaptado ${name} para transporte de niños con discapacidad`}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="w-full h-full object-cover"
                 />
+
             </div>
 
             <div className="p-3 text-left">

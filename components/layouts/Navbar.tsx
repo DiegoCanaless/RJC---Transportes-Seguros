@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { HiOutlineMenu, HiX } from "react-icons/hi";
@@ -62,12 +61,11 @@ export default function Navbar() {
         >
             {/* Logo */}
             <Link href="/">
-                <Image
+                <img
                     alt="Logo RJC Transportes"
                     width={70}
                     height={70}
                     src="/Logo.png"
-                    priority
                 />
             </Link>
 
