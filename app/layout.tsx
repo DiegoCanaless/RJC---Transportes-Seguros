@@ -29,7 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "RJC Transportes",
-              "url": "https://rjc-transportes-seguros.vercel.app/",
+              "url": "https://rjc-transportes.com",
               "description":
                 "Servicio de transporte especializado para niños y jóvenes con discapacidad en Mendoza. Traslados escolares y médicos con vehículos adaptados.",
               "founder": {
