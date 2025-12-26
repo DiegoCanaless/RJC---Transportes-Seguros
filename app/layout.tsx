@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "RJC Transportes | Rodolfo J. Carletti – Transporte para Niños con Discapacidad en Mendoza",
   description:
     "RJC Transportes, dirigido por Rodolfo J. Carletti, brinda transporte seguro y adaptado para niños y jóvenes con discapacidad en Mendoza. Más de 15 años de experiencia, vehículos habilitados y personal capacitado.",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 
@@ -17,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="es-AR">
       <head>
         <title>RJC Transportes | Transporte para Niños con Discapacidad en Mendoza</title>
-        <link rel="icon" href="../public/Logo.png" /> 
+        <link rel="icon" href="/logo.png" type="image/png" />
         <meta
           name="description"
           content="RJC Transportes brinda transporte seguro y adaptado para niños y jóvenes con discapacidad en Mendoza. Más de 15 años de experiencia, vehículos habilitados y personal capacitado."
@@ -30,6 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "@type": "LocalBusiness",
               "name": "RJC Transportes",
               "url": "https://rjc-transportes.com",
+              "logo": "https://rjc-transportes.com/logo.png",
               "description":
                 "Servicio de transporte especializado para niños y jóvenes con discapacidad en Mendoza. Traslados escolares y médicos con vehículos adaptados.",
               "founder": {

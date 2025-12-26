@@ -17,7 +17,7 @@ export default function Contact() {
                     <ContactForms
                         icon={<HiOutlinePhone aria-hidden="true" size={22} />}
                         title="Llámanos"
-                        value="+54 9 11 1234-5678"
+                        value="+54 9 261 551-7599"
                     />
 
                     <ContactForms
