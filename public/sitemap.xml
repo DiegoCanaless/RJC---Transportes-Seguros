@@ -4,16 +4,14 @@
   <!-- Página principal -->
   <url>
     <loc>https://rjc-transportes.com/</loc>
-    <lastmod>2025-12-24</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-08-03</lastmod>
     <priority>1.0</priority>
   </url>
 
   <!-- Página de vehículos -->
   <url>
-    <loc>https://rjc-transportes.com/vehicles</loc>
-    <lastmod>2025-12-24</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://rjc-transportes.com/vehiculos</loc>
+    <lastmod>2026-08-03</lastmod>
     <priority>0.8</priority>
   </url>
 

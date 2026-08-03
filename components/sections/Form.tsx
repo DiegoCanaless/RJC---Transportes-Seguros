@@ -85,28 +85,28 @@ export default function ContactForm() {
 
                         {/* NOMBRE */}
                         <div className="flex flex-col gap-1">
-                            <label className="text-[14px]">Nombre y Apellido</label>
+                            <label className="text-[15px]">Nombre y Apellido</label>
                             <Field name="name" type="text" placeholder="Juan Pérez" className="bg-gray-700 px-4 py-2 text-xs rounded-md text-white" />
                             <ErrorMessage name="name" component="p" className="text-red-500 text-xs"  />
                         </div>
 
                         {/* TELÉFONO */}
                         <div className="flex flex-col gap-1">
-                            <label className="text-[14px]">Teléfono</label>
+                            <label className="text-[15px]">Teléfono</label>
                             <Field name="phone" type="tel" placeholder="+54 9 261 443-4151" className="bg-gray-700 px-4 py-2 text-xs rounded-md text-white"/>
                             <ErrorMessage name="phone" component="p" className="text-red-500 text-xs"/>
                         </div>
 
                         {/* EMAIL */}
                         <div className="flex flex-col gap-1">
-                            <label className="text-[14px]">Email</label>
+                            <label className="text-[15px]">Email</label>
                             <Field name="email" type="email" placeholder="correo@gmail.com" className="bg-gray-700 px-4 py-2 text-xs rounded-md text-white" />
                             <ErrorMessage name="email" component="p" className="text-red-500 text-xs" />
                         </div>
 
                         {/* OBRA SOCIAL */}
                         <div className="flex flex-col gap-1">
-                            <label htmlFor="socialWork" className="text-[14px]">Obra Social</label>
+                            <label htmlFor="socialWork" className="text-[15px]">Obra Social</label>
                             <Field as="select" name="socialWork"  id="socialWork" className="bg-gray-700 px-4 py-2 text-xs rounded-md text-white" >
                                 <option value="">Seleccioná una obra social</option>
                                 {socialWorkOptions.map((work) => (
@@ -121,7 +121,7 @@ export default function ContactForm() {
                         {/* OTROS */}
                         {values.socialWork === "Otros" && (
                             <div className="flex flex-col gap-1">
-                                <label className="text-[14px]">
+                                <label className="text-[15px]">
                                     ¿Cuál es su obra social?
                                 </label>
                                 <Field name="otherSocialWork" type="text" placeholder="Ej: Swiss Medical" className="bg-gray-700 px-4 py-2 text-xs rounded-md text-white" />
@@ -131,7 +131,7 @@ export default function ContactForm() {
 
                         {/* MENSAJE */}
                         <div className="flex flex-col gap-1">
-                            <label className="text-[14px]">Mensaje</label>
+                            <label className="text-[15px]">Mensaje</label>
                             <Field as="textarea" name="message" placeholder="Ingrese su consulta" className="bg-gray-700 px-4 py-2 text-xs rounded-md text-white" />
                             <ErrorMessage name="message" component="p" className="text-red-500 text-xs" />
                         </div>

@@ -1,5 +1,5 @@
 
-import { FaBus, FaAccessibleIcon, FaStethoscope } from "react-icons/fa"
+import { FaBus, FaStethoscope } from "react-icons/fa"
 import CardService from "../ui/CardService"
 
 

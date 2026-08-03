@@ -25,7 +25,7 @@ export default function Footer() {
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
                 {/* Marca + SEO */}
                 <div className="flex flex-col gap-3">
-                    <img src="/Logo.png" alt="RJC Transportes - Transporte especial para niños con discapacidad" width={80} height={80} />
+                    <img src="/Logo.png" alt="RJC Transportes - Transporte especial para niños con discapacidad" width={80} height={80} loading="lazy" decoding="async" />
 
                     <p className="text-xs leading-relaxed text-slate-300"><strong>RJC Transportes</strong> brinda servicios de transporte seguro y adaptado para niños y jóvenes con discapacidad en Mendoza. Más de 15 años de experiencia, compromiso humano y vehículos habilitados.</p>
 

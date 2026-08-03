@@ -10,5 +10,40 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ============================================
+   Animaciones CSS puras (sin framer-motion)
+   ============================================ */
+
+/* Hero: fade-up que corre apenas pinta el CSS (no depende de JS) */
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-animate {
+  opacity: 1;
+  animation: hero-fade-up 0.6s ease-out both;
+}
+
+.hero-delay-1 { animation-delay: 0.15s; }
+.hero-delay-2 { animation-delay: 0.3s; }
+.hero-delay-3 { animation-delay: 0.45s; }
+.hero-delay-4 { animation-delay: 0.6s; }
+
+/* Respetar preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  .hero-animate {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
 
 

@@ -20,6 +20,10 @@ export default function CardVehicle({
                     src={image}
                     alt={`Vehículo adaptado ${name} para transporte de niños con discapacidad`}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                    width={800}
+                    height={600}
                 />
 
             </div>
